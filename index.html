@@ -3,154 +3,196 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Expedia Travel Booking Portal</title>
+<title>Exclusive Travel Deals | Save Big on Your Next Trip</title>
+<meta name="description" content="Find unbeatable travel deals on flights, hotels, and vacation packages. Limited-time offers available now.">
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f7fa;
-    color: #333;
-}
-
+* {margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;}
+body {background:#f5f7fa;color:#222;line-height:1.6;}
 header {
-    background: #003366;
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
+  background:linear-gradient(rgba(0,53,128,0.85), rgba(0,53,128,0.85)),
+  url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+  background-size:cover;
+  background-position:center;
+  color:white;
+  text-align:center;
+  padding:100px 20px;
 }
-
-h1 {
-    margin-bottom: 20px;
-}
-
+header h1 {font-size:3rem;margin-bottom:20px;}
+header p {font-size:1.2rem;margin-bottom:30px;}
 .btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 15px 30px;
-    background: #ffcc00;
-    color: #003366;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
+  display:inline-block;
+  background:#ff5a5f;
+  color:white;
+  padding:15px 30px;
+  border-radius:5px;
+  text-decoration:none;
+  font-size:1.2rem;
+  transition:0.3s;
+}
+.btn:hover {background:#e14f51;}
+
+.section {padding:60px 20px;text-align:center;}
+.features {display:flex;flex-wrap:wrap;justify-content:center;gap:30px;margin-top:30px;}
+.feature-box {
+  background:white;
+  padding:30px;
+  width:280px;
+  border-radius:8px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
 }
 
-.btn:hover {
-    background: #ffdb4d;
-}
-
-section {
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: auto;
+.countdown {
+  font-size:1.8rem;
+  margin-top:15px;
+  color:#ff5a5f;
+  font-weight:bold;
 }
 
 footer {
-    background: #002244;
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
-    font-size: 14px;
+  background:#003580;
+  color:white;
+  text-align:center;
+  padding:20px;
+  font-size:0.9rem;
 }
 
-.nav {
-    background: #001a33;
-    padding: 10px;
-    text-align: center;
+/* POPUP */
+.modal {
+  display:none;
+  position:fixed;
+  z-index:9999;
+  left:0;top:0;
+  width:100%;height:100%;
+  background:rgba(0,0,0,0.7);
+  justify-content:center;
+  align-items:center;
+}
+.modal-content {
+  background:white;
+  padding:40px;
+  max-width:450px;
+  width:90%;
+  text-align:center;
+  border-radius:10px;
+  position:relative;
+  animation:fadeIn 0.4s ease-in-out;
+}
+.close {
+  position:absolute;
+  top:10px;right:15px;
+  font-size:22px;
+  cursor:pointer;
+}
+@keyframes fadeIn {
+  from {opacity:0;transform:translateY(-20px);}
+  to {opacity:1;transform:translateY(0);}
 }
 
-.nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.disclaimer {
-    font-size: 13px;
-    margin-top: 20px;
-    color: #ccc;
-}
-
-hr {
-    margin: 50px 0;
+@media(max-width:768px){
+  header h1{font-size:2.2rem;}
+  .features{flex-direction:column;align-items:center;}
 }
 </style>
 </head>
-
 <body>
 
-<div class="nav">
-<a href="#home">Home</a>
-<a href="#privacy">Privacy Policy</a>
-<a href="#contact">Contact</a>
-</div>
-
-<header id="home">
-<h1>Book Travel with Expedia</h1>
-<p>You are visiting an independent travel affiliate website that promotes the official Expedia booking platform.</p>
-
-<a class="btn" href="https://expedia.com/affiliate/crweY8M" target="_blank">
-Visit Official Expedia Website
+<header>
+<h1>Unlock Exclusive Travel Deals</h1>
+<p>Flights • Hotels • Vacation Packages • Car Rentals</p>
+<a href="https://expedia.com/affiliate/R3FiU1G" target="_blank" class="btn">
+Start Saving Now
 </a>
-
-<div class="disclaimer">
-Affiliate Disclosure: We may earn a commission when you book through our Expedia affiliate link.
-This site is not owned or operated by Expedia.
-</div>
+<div class="countdown" id="countdown"></div>
 </header>
 
-<section>
+<section class="section">
 <h2>Why Book Through Expedia?</h2>
-<ul>
-<li>Flights worldwide</li>
-<li>Hotels & resorts</li>
-<li>Car rentals</li>
-<li>Vacation packages</li>
-<li>Secure online reservations</li>
-</ul>
-
-<a class="btn" href="https://expedia.com/affiliate/crweY8M" target="_blank">
-Start Booking on Expedia
+<div class="features">
+  <div class="feature-box">
+    <h3>✈ Massive Flight Deals</h3>
+    <p>Compare airlines and grab unbeatable prices worldwide.</p>
+  </div>
+  <div class="feature-box">
+    <h3>🏨 Top Hotel Discounts</h3>
+    <p>From luxury resorts to budget stays — save more.</p>
+  </div>
+  <div class="feature-box">
+    <h3>🌍 Bundle & Save</h3>
+    <p>Combine flights + hotels and unlock even bigger discounts.</p>
+  </div>
+</div>
+<br>
+<a href="https://expedia.com/affiliate/R3FiU1G" target="_blank" class="btn">
+View Limited-Time Deals
 </a>
 </section>
 
-<hr>
-
-<section id="privacy">
-<h2>Privacy Policy</h2>
-
-<p>This website is an independent affiliate marketing website promoting Expedia travel services.</p>
-
-<h3>Information Collection</h3>
-<p>We do not directly collect personal information from visitors unless voluntarily provided through contact communication.</p>
-
-<h3>Cookies & Third Parties</h3>
-<p>Third-party partners, including Expedia and advertising networks, may use cookies or tracking technologies for analytics and advertising purposes.</p>
-
-<h3>Affiliate Relationship</h3>
-<p>When you click our affiliate links, you are redirected to the official Expedia website where bookings are completed. Expedia may collect and process data according to their own privacy policy.</p>
-
-<p>Last Updated: March 2026</p>
-</section>
-
-<hr>
-
-<section id="contact">
-<h2>Contact Us</h2>
-
-<p>If you have questions regarding this website, please contact us:</p>
-
-<p>Email: traveladvisory@mail.com</p>
-
-<p>For booking assistance or customer support, please contact Expedia directly through their official website.</p>
+<section class="section" style="background:#eef2f7;">
+<h2>Travel Smarter. Spend Less.</h2>
+<p>Thousands of travelers book daily to secure the best travel offers before prices rise.</p>
+<br>
+<a href="https://expedia.com/affiliate/R3FiU1G" target="_blank" class="btn">
+Check Today’s Offers
+</a>
 </section>
 
 <footer>
-<p>© 2026 Travel Affiliate Website | Independent Affiliate of Expedia</p>
+<p>
+Affiliate Disclosure: This site contains affiliate links. We may earn a commission if you book through our link at no extra cost to you. All bookings are processed securely through Expedia.
+</p>
 </footer>
 
-    
+<!-- POPUP -->
+<div id="popup" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <h2>Wait! Don’t Miss These Travel Deals ✈</h2>
+    <p>Click below to unlock exclusive savings before prices increase.</p>
+    <br>
+    <a href="https://expedia.com/affiliate/R3FiU1G" target="_blank" class="btn">
+    Unlock Deals Now
+    </a>
+  </div>
+</div>
+
+<script>
+// COUNTDOWN TIMER (24 hours reset each visit)
+let endTime = localStorage.getItem("endTime");
+if (!endTime) {
+  endTime = new Date().getTime() + 24*60*60*1000;
+  localStorage.setItem("endTime", endTime);
+}
+const countdownEl = document.getElementById("countdown");
+setInterval(() => {
+  let now = new Date().getTime();
+  let distance = endTime - now;
+  if (distance < 0) {
+    localStorage.removeItem("endTime");
+    location.reload();
+  }
+  let hours = Math.floor((distance % (1000*60*60*24))/(1000*60*60));
+  let minutes = Math.floor((distance % (1000*60*60))/(1000*60));
+  let seconds = Math.floor((distance % (1000*60))/1000);
+  countdownEl.innerHTML = "Deal ends in: " + hours + "h " + minutes + "m " + seconds + "s";
+},1000);
+
+// EXIT INTENT (Desktop)
+document.addEventListener("mouseout", function(e){
+  if (e.clientY < 5) {
+    document.getElementById("popup").style.display="flex";
+  }
+});
+
+// MOBILE FALLBACK (show after 10 seconds)
+setTimeout(function(){
+  document.getElementById("popup").style.display="flex";
+},10000);
+
+function closePopup(){
+  document.getElementById("popup").style.display="none";
+}
+</script>
+
 </body>
 </html>
-
