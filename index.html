@@ -3,195 +3,199 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Exclusive Travel Deals | Save Big on Your Next Trip</title>
-<meta name="description" content="Find unbeatable travel deals on flights, hotels, and vacation packages. Limited-time offers available now.">
+
+<title>Travel Deals with Expedia</title>
 
 <style>
-* {margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;}
-body {background:#f5f7fa;color:#222;line-height:1.6;}
-header {
-  background:linear-gradient(rgba(0,53,128,0.85), rgba(0,53,128,0.85)),
-  url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
-  background-size:cover;
-  background-position:center;
-  color:white;
-  text-align:center;
-  padding:100px 20px;
-}
-header h1 {font-size:3rem;margin-bottom:20px;}
-header p {font-size:1.2rem;margin-bottom:30px;}
-.btn {
-  display:inline-block;
-  background:#ff5a5f;
-  color:white;
-  padding:15px 30px;
-  border-radius:5px;
-  text-decoration:none;
-  font-size:1.2rem;
-  transition:0.3s;
-}
-.btn:hover {background:#e14f51;}
 
-.section {padding:60px 20px;text-align:center;}
-.features {display:flex;flex-wrap:wrap;justify-content:center;gap:30px;margin-top:30px;}
-.feature-box {
-  background:white;
-  padding:30px;
-  width:280px;
-  border-radius:8px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+body{
+font-family: Arial, sans-serif;
+margin:0;
+background:#f4f7fb;
 }
 
-.countdown {
-  font-size:1.8rem;
-  margin-top:15px;
-  color:#ff5a5f;
-  font-weight:bold;
+header{
+background:#00355f;
+color:white;
+padding:30px;
+text-align:center;
 }
 
-footer {
-  background:#003580;
-  color:white;
-  text-align:center;
-  padding:20px;
-  font-size:0.9rem;
+header p{
+max-width:700px;
+margin:auto;
 }
 
-/* POPUP */
-.modal {
-  display:none;
-  position:fixed;
-  z-index:9999;
-  left:0;top:0;
-  width:100%;height:100%;
-  background:rgba(0,0,0,0.7);
-  justify-content:center;
-  align-items:center;
-}
-.modal-content {
-  background:white;
-  padding:40px;
-  max-width:450px;
-  width:90%;
-  text-align:center;
-  border-radius:10px;
-  position:relative;
-  animation:fadeIn 0.4s ease-in-out;
-}
-.close {
-  position:absolute;
-  top:10px;right:15px;
-  font-size:22px;
-  cursor:pointer;
-}
-@keyframes fadeIn {
-  from {opacity:0;transform:translateY(-20px);}
-  to {opacity:1;transform:translateY(0);}
+#date{
+margin-top:10px;
+font-size:18px;
+font-weight:bold;
 }
 
-@media(max-width:768px){
-  header h1{font-size:2.2rem;}
-  .features{flex-direction:column;align-items:center;}
+nav{
+background:#ffcc00;
+padding:12px;
+text-align:center;
 }
+
+nav a{
+margin:0 15px;
+text-decoration:none;
+font-weight:bold;
+color:#00355f;
+}
+
+.hero{
+background:url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") center/cover;
+height:420px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:48px;
+background:rgba(0,0,0,0.5);
+padding:20px;
+border-radius:10px;
+}
+
+.container{
+padding:40px;
+max-width:1000px;
+margin:auto;
+}
+
+.deals{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 3px 12px rgba(0,0,0,0.1);
+}
+
+.card h3{
+margin-top:0;
+}
+
+.btn{
+display:inline-block;
+margin-top:15px;
+padding:12px 25px;
+background:#ff6600;
+color:white;
+text-decoration:none;
+border-radius:6px;
+font-weight:bold;
+}
+
+.btn:hover{
+background:#ff4d00;
+}
+
+footer{
+background:#00355f;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:40px;
+}
+
 </style>
+
 </head>
+
 <body>
 
 <header>
-<h1>Unlock Exclusive Travel Deals</h1>
-<p>Flights • Hotels • Vacation Packages • Car Rentals</p>
-<a href="https://expedia.com/affiliate/R3FiU1G" target="_blank" class="btn">
-Start Saving Now
-</a>
-<div class="countdown" id="countdown"></div>
+
+<h1>Find Amazing Travel Deals with Expedia</h1>
+
+<div id="date"></div>
+
+<p>
+This website promotes travel deals available through Expedia. Some links on this
+page are affiliate links, meaning we may earn a commission if you book through them.
+</p>
+
 </header>
 
-<section class="section">
-<h2>Why Book Through Expedia?</h2>
-<div class="features">
-  <div class="feature-box">
-    <h3>✈ Massive Flight Deals</h3>
-    <p>Compare airlines and grab unbeatable prices worldwide.</p>
-  </div>
-  <div class="feature-box">
-    <h3>🏨 Top Hotel Discounts</h3>
-    <p>From luxury resorts to budget stays — save more.</p>
-  </div>
-  <div class="feature-box">
-    <h3>🌍 Bundle & Save</h3>
-    <p>Combine flights + hotels and unlock even bigger discounts.</p>
-  </div>
-</div>
-<br>
-<a href="https://expedia.com/affiliate/R3FiU1G" target="_blank" class="btn">
-View Limited-Time Deals
-</a>
+<nav>
+<a href="#deals">Deals</a>
+<a href="#why">Why Expedia</a>
+<a href="#start">Start Travel</a>
+</nav>
+
+<section class="hero">
+<h1>Your Next Adventure Starts Here</h1>
 </section>
 
-<section class="section" style="background:#eef2f7;">
-<h2>Travel Smarter. Spend Less.</h2>
-<p>Thousands of travelers book daily to secure the best travel offers before prices rise.</p>
-<br>
-<a href="https://expedia.com/affiliate/R3FiU1G" target="_blank" class="btn">
-Check Today’s Offers
+<div class="container">
+
+<h2 id="deals">Popular Travel Deals</h2>
+
+<div class="deals">
+
+<div class="card">
+<h3>Beach Vacations</h3>
+<p>Discover tropical destinations and relaxing beach resorts.</p>
+<a class="btn" href="https://expedia.com/affiliates/expedia-home.c9ccAIs" target="_blank">View Deals</a>
+</div>
+
+<div class="card">
+<h3>City Adventures</h3>
+<p>Explore famous cities around the world with great hotel discounts.</p>
+<a class="btn" href="https://expedia.com/affiliates/expedia-home.c9ccAIs" target="_blank">Explore Cities</a>
+</div>
+
+<div class="card">
+<h3>Flight Discounts</h3>
+<p>Compare flights and find the best airline prices.</p>
+<a class="btn" href="https://expedia.com/affiliates/expedia-home.c9ccAIs" target="_blank">Find Flights</a>
+</div>
+
+</div>
+
+<h2 id="why">Why Book Through Expedia?</h2>
+
+<ul>
+<li>Compare thousands of flights and hotels</li>
+<li>Bundle deals to save money</li>
+<li>Millions of traveler reviews</li>
+<li>24/7 booking support</li>
+</ul>
+
+<h2 id="start">Start Your Journey</h2>
+
+<p>Click below to begin searching for travel deals.</p>
+
+<a class="btn" href="https://expedia.com/affiliates/expedia-home.c9ccAIs" target="_blank">
+Search Travel Deals
 </a>
-</section>
+
+</div>
 
 <footer>
+
 <p>
-Affiliate Disclosure: This site contains affiliate links. We may earn a commission if you book through our link at no extra cost to you. All bookings are processed securely through Expedia.
+This website independently promotes travel services from Expedia through affiliate links.
 </p>
+
+<p>© 2026 Travel Deals</p>
+
 </footer>
 
-<!-- POPUP -->
-<div id="popup" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closePopup()">&times;</span>
-    <h2>Wait! Don’t Miss These Travel Deals ✈</h2>
-    <p>Click below to unlock exclusive savings before prices increase.</p>
-    <br>
-    <a href="https://expedia.com/affiliate/R3FiU1G" target="_blank" class="btn">
-    Unlock Deals Now
-    </a>
-  </div>
-</div>
-
 <script>
-// COUNTDOWN TIMER (24 hours reset each visit)
-let endTime = localStorage.getItem("endTime");
-if (!endTime) {
-  endTime = new Date().getTime() + 24*60*60*1000;
-  localStorage.setItem("endTime", endTime);
-}
-const countdownEl = document.getElementById("countdown");
-setInterval(() => {
-  let now = new Date().getTime();
-  let distance = endTime - now;
-  if (distance < 0) {
-    localStorage.removeItem("endTime");
-    location.reload();
-  }
-  let hours = Math.floor((distance % (1000*60*60*24))/(1000*60*60));
-  let minutes = Math.floor((distance % (1000*60*60))/(1000*60));
-  let seconds = Math.floor((distance % (1000*60))/1000);
-  countdownEl.innerHTML = "Deal ends in: " + hours + "h " + minutes + "m " + seconds + "s";
-},1000);
-
-// EXIT INTENT (Desktop)
-document.addEventListener("mouseout", function(e){
-  if (e.clientY < 5) {
-    document.getElementById("popup").style.display="flex";
-  }
-});
-
-// MOBILE FALLBACK (show after 10 seconds)
-setTimeout(function(){
-  document.getElementById("popup").style.display="flex";
-},10000);
-
-function closePopup(){
-  document.getElementById("popup").style.display="none";
-}
+const today = new Date();
+const options = { weekday:'long', year:'numeric', month:'long', day:'numeric' };
+document.getElementById("date").innerHTML = today.toLocaleDateString('en-US', options);
 </script>
 
 </body>
